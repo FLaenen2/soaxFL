@@ -1,0 +1,132 @@
+#ifndef iterator_hpp
+#define iterator_hpp
+#include <thrust/device_reference.h>
+namespace SOAX {
+
+template <class Expr>
+class CIterator {
+public:
+  using iterator_category = std::random_access_iterator_tag;
+  using difference_type = std::ptrdiff_t;
+  //using reference = thrust::device_reference<Expr::value_type>;
+  using reference = typename thrust::device_reference<typename Expr::value_type>::value_type;
+  using pointer = typename Expr::value_type*;
+  using value_type = typename Expr::value_type;
+
+  CIterator() = default;
+  CIterator(const Expr& e, difference_type i) :
+    expr_{&e}, i_{i} {}
+
+  bool operator==(const CIterator& that) const {
+    return i_ == that.i_;
+  }
+  
+  bool operator!=(const CIterator& that) const {
+    return !(*this == that);
+  }
+  // Similarly for operators <, >, <=, >=
+
+  value_type operator*() const {
+    return (*expr_)[i_];
+  }
+
+  value_type operator[](difference_type n) const {
+    return (*expr_)[i_ + n];
+  }
+
+  CIterator& operator++() { return ++i_; }
+  CIterator operator++(int) { auto tmp = *this; ++*this; return tmp; }
+
+  CIterator& operator--() { return --i_; }
+  CIterator operator--(int) { auto tmp = *this; --*this; return tmp; }
+
+  CIterator operator+(difference_type n) const {
+    return CIterator{expr_, i_ + n};
+  }
+  CIterator operator-(difference_type n) const {
+    return CIterator{expr_, i_ - n};
+  }
+
+  difference_type operator-(const CIterator& it) const {
+    return i_ - it.i_;
+  }
+
+  // Similarly for operators +=, and -=
+
+  friend CIterator operator+(difference_type n, const CIterator& i) {
+    return i + n;
+  }
+
+  friend CIterator operator-(difference_type n, const CIterator& i) {
+    return i - n;
+  }
+
+
+private:
+    const Expr* expr_;
+    difference_type i_;
+};
+
+template <class Expr>
+class Iterator {
+public:
+  using iterator_category = std::random_access_iterator_tag;
+  using difference_type = std::ptrdiff_t;
+  using reference = typename thrust::device_reference<typename Expr::value_type>::value_type;
+  using pointer = typename Expr::value_type*;
+  using value_type = typename Expr::value_type;
+
+  Iterator() = default;
+  Iterator(Expr& e, difference_type i) :
+    expr_{&e}, i_{i} {}
+
+  bool operator==(const Iterator& that) const {
+    return i_ == that.i_;
+  }
+  
+  bool operator!=(const Iterator& that) const {
+    return !(*this == that);
+  }
+  // Similarly for operators <, >, <=, >=
+
+  thrust::device_reference<value_type> operator*() {
+    return (*expr_)[i_];
+  }
+
+  value_type operator[](difference_type n) const {
+    return (*expr_)[i_ + n];
+  }
+
+  Iterator& operator++() { return ++i_; }
+  Iterator operator++(int) { auto tmp = *this; ++*this; return tmp; }
+  Iterator& operator--() { return --i_; }
+  Iterator operator--(int) { auto tmp = *this; --*this; return tmp; }
+
+  Iterator operator+(difference_type n) const {
+    return Iterator{expr_, i_ + n};
+  }
+  Iterator operator-(difference_type n) const {
+    return Iterator{expr_, i_ - n};
+  }
+  // Similarly for operators +=, and -=
+
+  friend Iterator operator+(difference_type n, const Iterator& i) {
+    return i + n;
+  }
+
+  friend Iterator operator-(difference_type n, const Iterator& i) {
+    return i - n;
+  }
+
+  difference_type operator-(const Iterator& it) const {
+    return i_ - it.i_;
+  }
+
+private:
+    Expr* expr_;
+    difference_type i_;
+};
+
+} // namespace SOAX
+
+#endif

@@ -1,0 +1,22 @@
+CXX = g++
+NVCC = g++
+#CXXFLAGS = -Xcompiler -std=c++11
+BOOST_INC=/home/flaenen/boost_1_61_0
+OPENCL_INC=/softs/cuda/7.0/include
+
+X_INC = -I/usr/lib/openmpi/include/ -I/softs/intel/impi/5.0.1.035/intel64/include
+
+all: main 
+
+#libsoax.a: soaxWriterMPI.o soaxWriterThreaded.o
+
+main: main.o
+	$(NVCC) $(CXXFLAGS) -o main main.o
+
+%.o:	%.cpp
+	$(NVCC) -std=c++11 -O3 $(CXXFLAGS) $(X_INC) $(STORAGE_TYPE) -I$(OPENCL_INC) -I$(BOOST_INC) -c $<
+
+
+.PHONY: clean
+clean:
+	rm -f *.~ *.o libsoax.a main
