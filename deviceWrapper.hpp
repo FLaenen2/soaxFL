@@ -18,7 +18,7 @@ class deviceWrapper{
 				ptrWrapper(void){} // default empty constructor
 				ptrWrapper(ptrWrapper const &other) : dptr(other.dptr){}; // kernels manipulate only pointer and instances
 			public:
-				T *dptr;
+
 		} devPtrWrapper;
 
 		using return_ref_type = thrust::device_reference<T>;
@@ -53,6 +53,7 @@ class deviceWrapper{
 		}//*/
 
 		void resize(int n){
+			thrust::device_vector<
 			tvec.resize(n);
 			// rebind device_ptr and pointer in case it has changed
 			tptr = tvec.data();
@@ -71,10 +72,9 @@ class deviceWrapper{
 		};
 
 		size_t m_size;
-
-	private:	
-
-		thrust::device_vector<T> tvec;
+		T *dptr;
+	private:
+		//thrust::device_vector<T> tvec;
 		thrust::device_ptr<T> tptr;
 };
 #endif
