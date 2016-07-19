@@ -39,7 +39,7 @@ class deviceWrapper{
         		return tvec[i];
             #else
 				return dptr[i];
-            #end
+            #endif
 		}
 
 		size_t size(void){
