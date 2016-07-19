@@ -31,22 +31,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="deviceWrapper.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deviceWrapper.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deviceWrapper.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="300">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding>
+                <element signature="e#203#229#0" expanded="true" />
+                <element signature="e#890#905#0" expanded="true" />
+                <element signature="e#1115#1130#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,30 +65,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gpuKernels.cu" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpuKernels.cu">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrayWrapper.hpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="arrayWrapper.hpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arrayWrapper.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="10" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="10" />
-              <folding>
-                <element signature="e#209#370#0" expanded="false" />
-                <element signature="e#1451#1479#0" expanded="false" />
-                <element signature="e#3904#4221#0" expanded="false" />
-                <element signature="e#4255#4308#0" expanded="false" />
-                <element signature="e#4767#5073#0" expanded="false" />
-                <element signature="e#5569#5944#0" expanded="false" />
-                <element signature="e#6466#6563#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="303">
+              <caret line="191" column="6" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,9 +108,11 @@
       <file leaf-file-name="macros.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/macros.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="75">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding>
+                <element signature="e#14#71#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,9 +134,10 @@
         <option value="$PROJECT_DIR$/storage.hpp" />
         <option value="$PROJECT_DIR$/main.cu" />
         <option value="$PROJECT_DIR$/tupleHelper.hpp" />
-        <option value="$PROJECT_DIR$/arrayWrapper.hpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/deviceWrapper.hpp" />
+        <option value="$PROJECT_DIR$/macros.hpp" />
+        <option value="$PROJECT_DIR$/arrayWrapper.hpp" />
       </list>
     </option>
   </component>
@@ -469,15 +448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="90" column="10" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="10" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -509,7 +480,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -517,7 +490,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#203#229#0" expanded="true" />
+            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1115#1130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,15 +533,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="90" column="10" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="10" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,7 +565,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -604,7 +575,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#203#229#0" expanded="true" />
+            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1115#1130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -643,15 +618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +650,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -691,7 +660,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#203#229#0" expanded="true" />
+            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1115#1130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -715,15 +688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2850">
           <caret line="190" column="84" selection-start-line="190" selection-start-column="84" selection-end-line="190" selection-end-column="84" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +704,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -747,7 +714,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="e#203#229#0" expanded="true" />
+            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1115#1130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,15 +744,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
           <caret line="190" column="84" selection-start-line="190" selection-start-column="84" selection-end-line="190" selection-end-column="84" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -797,7 +760,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,14 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deviceWrapper.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,22 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arrayWrapper.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="10" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="10" />
-          <folding>
-            <element signature="e#209#370#0" expanded="false" />
-            <element signature="e#1451#1479#0" expanded="false" />
-            <element signature="e#3904#4221#0" expanded="false" />
-            <element signature="e#4255#4308#0" expanded="false" />
-            <element signature="e#4767#5073#0" expanded="false" />
-            <element signature="e#5569#5944#0" expanded="false" />
-            <element signature="e#6466#6563#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cu">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2790">
@@ -891,8 +832,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/macros.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deviceWrapper.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <element signature="e#203#229#0" expanded="true" />
+            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1115#1130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrayWrapper.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="191" column="6" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="6" />
           <folding />
         </state>
       </provider>
