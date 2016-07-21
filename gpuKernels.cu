@@ -9,11 +9,11 @@ __global__ void testArrayWrapper(OP expr){
 
 
 template<typename T, typename OP>
-__global__ void kern(T *output, OP expr, const int size){
+__global__ void kern(T *output, OP expr, const size_t size){
     /// OP2  an expression template
     /// *output a pointer to write to (must be valid, writable from the device)
-
-    if (i < n){
+    int i = threadIdx.x + blockIdx.x * blockDim.x;
+    if (i < size){
         output[i] = expr[i];
     }
 }

@@ -1,4 +1,3 @@
-CUDA=0
 CPPVER=-std=c++11
 OPTIM=-O3
 OS = $(shell uname -s 2>/dev/null | tr "[:upper:]" "[:lower:]")
@@ -16,7 +15,7 @@ all: main
 
 #libsoax.a: soaxWriterMPI.o soaxWriterThreaded.o
 OBJS = main.o
-ifeq ($(CUDA),1)
+ifeq ($(CC),nvcc)
     OBJS += gpuKernels.o 
 endif
 
@@ -31,7 +30,7 @@ main:	$(OBJS)
 	$(CC) $(OPTIM) $(CPPVER) -o $@ -c $< 
 
 gpuKernels.o:	gpuKernels.cu
-	$(NVCC) -gencode arch=compute_20,code=sm_20 -ccbin $(CXX) $(CPPVER) $(OPTIM) $(CXXFLAGS) $(X_INC) -c $<
+	$(CC) -gencode arch=compute_20,code=sm_20 -ccbin $(CXX) $(CPPVER) $(OPTIM) $(CXXFLAGS) $(X_INC) -c $<
 
 
 .PHONY: clean
