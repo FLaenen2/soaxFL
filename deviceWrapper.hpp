@@ -1,6 +1,7 @@
 #ifndef SOAX_deviceWrapper_hpp
 #define SOAX_deviceWrapper_hpp
 
+//#ifdef __NVCC__
 #include <thrust/device_vector.h>
 
 
@@ -19,7 +20,7 @@ class deviceWrapper{
 			// calls default constructor for thrust::device_vector
 			tvec = thrust::device_vector<T>();
 			tptr = tvec.data();
-			devPtrWrapper.dptr = thrust::raw_pointer_cast(tptr);
+			dptr = thrust::raw_pointer_cast(tptr);
 		}
 		deviceWrapper(deviceWrapper const& other) : dptr(other.ptr){
 			// copy constructor. Mandatory to pass pointer to kernel and construct expression template.
@@ -70,4 +71,5 @@ class deviceWrapper{
 		thrust::device_vector<T> tvec;
 		thrust::device_ptr<T> tptr;
 };
+
 #endif
