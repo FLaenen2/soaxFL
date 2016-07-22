@@ -189,9 +189,9 @@ public:
 
    DEBUGMSG("ArrayWrapper& operator=(ArrayWrapper const& b)\n");
 #ifdef __NVCC__
-	//testArrayWrapper<<<1,1>>>((*this));
+	testArrayWrapper<<<1,1>>>((*this).devPtrWrapper);
 	//kern<<<1,1>>>(b.data(), b.size(), *this); // b.data return underlying pointer)
-	DEBUGCMD(cudaDeviceSynchronize());
+	cudaDeviceSynchronize();
    //thrust::copy(cbeg(b), ccend(b), bbeg(*this));
    //thrust::copy(cbeg(b), cbeg(b), this->begin());
    //   thrust::copy(b.begin(), b.end(), this->begin());

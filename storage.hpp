@@ -3,9 +3,8 @@
 
 #include <array>
 #include <vector>
-
+#include "./deviceWrapper.hpp"
 #ifdef __NVCC__
-	#include "./deviceWrapper.hpp"
 	//#include <thrust/host_vector.h>
 	#include <thrust/device_vector.h>
 	#include <thrust/device_reference.h>

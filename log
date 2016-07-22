@@ -1,87 +1,63 @@
-clang++ -O3 -std=c++11 -o main.o -c main.cu 
-In file included from main.cu:10:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream:38:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios:216:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__locale:15:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:439:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm:628:
-/Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:5172:15: error: call to implicitly-deleted default constructor of 'std::__1::bad_weak_ptr'
-        throw bad_weak_ptr();
-              ^
-/Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:3574:7: note: default constructor of 'bad_weak_ptr' is implicitly deleted because base class 'std::exception' has no default constructor
-    : public std::exception
-      ^
-In file included from main.cu:10:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream:38:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios:216:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__locale:18:
-In file included from /Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/mutex:177:
-/Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional:1754:15: error: call to implicitly-deleted default constructor of 'std::__1::bad_function_call'
-        throw bad_function_call();
-              ^
-/Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional:1241:7: note: default constructor of 'bad_function_call' is implicitly deleted because base class 'std::exception' has no default constructor
-    : public exception
-      ^
-In file included from main.cu:18:
-In file included from ./soax.hpp:13:
-./tupleHelper.hpp:51:35: error: expected ';' after expression
-      obj.std::tuple_element<N - 1, AttributeTuple>::type::Object::value[j] = soax.std::tuple_element<
-                                  ^
-                                  ;
-./tupleHelper.hpp:51:51: error: expected unqualified-id
-      obj.std::tuple_element<N - 1, AttributeTuple>::type::Object::value[j] = soax.std::tuple_element<
-                                                  ^
-./tupleHelper.hpp:64:31: error: expected ';' after expression
-      obj.std::tuple_element<0, AttributeTuple>::type::Object::value[j] = soax.std::tuple_element<0, AttributeTuple>::type::template Access<0, AttributeTuple>::data_[j][i];
-                              ^
-                              ;
-./tupleHelper.hpp:64:47: error: expected unqualified-id
-      obj.std::tuple_element<0, AttributeTuple>::type::Object::value[j] = soax.std::tuple_element<0, AttributeTuple>::type::template Access<0, AttributeTuple>::data_[j][i];
-                                              ^
-./tupleHelper.hpp:79:34: error: expected ';' after expression
-      soax.std::tuple_element<N-1,AttributeTuple>::type::template Access<IndexOfAtt<typename std::tuple_element<N-1,AttributeTuple>::type,AttributeTuple>::value,AttributeTuple>::data_[j][i] =  
-                                 ^
-                                 ;
-./tupleHelper.hpp:79:49: error: expected unqualified-id
-      soax.std::tuple_element<N-1,AttributeTuple>::type::template Access<IndexOfAtt<typename std::tuple_element<N-1,AttributeTuple>::type,AttributeTuple>::value,AttributeTuple>::data_[j][i] =  
-                                                ^
-./tupleHelper.hpp:90:32: error: expected ';' after expression
-      soax.std::tuple_element<0,AttributeTuple>::type::template Access<0,AttributeTuple>::data_[j][i] = obj.std::tuple_element<0,AttributeTuple>::type::Object::value[j]; 
-                               ^
-                               ;
-./tupleHelper.hpp:90:47: error: expected unqualified-id
-      soax.std::tuple_element<0,AttributeTuple>::type::template Access<0,AttributeTuple>::data_[j][i] = obj.std::tuple_element<0,AttributeTuple>::type::Object::value[j]; 
-                                              ^
+nvcc -O3 -std=c++11 -o main.o -c main.cu 
 main.cu:240:1: warning: '/*' within block comment [-Wcomment]
 /*
 ^
-In file included from main.cu:18:
-./soax.hpp:54:3: error: call to implicitly-deleted default constructor of 'GenScatterHierarchyTuple<SoaxAttributeInheritor<tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >::Inheritor, std::__1::tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >'
-  Soax(int particleNumber) {
-  ^
-main.cu:180:28: note: in instantiation of member function 'SOAX::Soax<std::__1::tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >::Soax' requested here
-    SOAX::Soax<ArrayTypes> p(elementNumber);
-                           ^
-./tupleManip.hpp:192:5: note: default constructor of 'GenScatterHierarchyTuple<SoaxAttributeInheritor<tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >::Inheritor, std::__1::tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >' is implicitly deleted because base class 'GenScatterHierarchyTuple<Inheritor, id<float, 1> >' has a deleted default constructor
-  : public GenScatterHierarchyTuple<Unit, AtomicType>
-    ^
-./tupleManip.hpp:202:5: note: default constructor of 'GenScatterHierarchyTuple<Inheritor, id<float, 1> >' is implicitly deleted because base class 'Inheritor<id<float, 1> >' has a deleted default constructor
-  : public Unit<AtomicType>
-    ^
-./tupleHelper.hpp:16:21: note: default constructor of 'Inheritor<id<float, 1> >' is implicitly deleted because base class 'id<float, 1>::Access<IndexOfAtt<id<float, 1>, tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >::value, tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >' has a deleted default constructor
-  class Inheritor : public T::template Access<IndexOfAtt<T,Tuple>::value,Tuple> {};
-                    ^
-main.cu:52:1: note: default constructor of 'Access<0, std::__1::tuple<id<float, 1>, pos<float, 3>, vel<float, 3>, acc<float, 3>, radius<float, 1>, hist<float, 5> > >' is implicitly deleted because base class 'SOAX::Storage<float, 1>' has a deleted default constructor
-SOAX_ATTRIBUTE(id, "N");       // identity (number) 
+1 warning generated.
+main.cu(181): warning: variable "dt" was declared but never referenced
+
+main.cu:240:1: warning: '/*' within block comment [-Wcomment]
+/*
 ^
-./soaxAttributes.hpp:24:22: note: expanded from macro 'SOAX_ATTRIBUTE'
-      class Access : public SOAX::Storage<T,Dim> {                      \
-                     ^
-./storage.hpp:70:33: note: default constructor of 'Storage<float, 1>' is implicitly deleted because field 'data_' has a deleted default constructor
-  std::array<ContainerType,dim> data_;
-                                ^
-/Applications/Xcode6.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/array:137:16: note: default constructor of 'array<SOAX::ArrayWrapper<std::__1::vector<float, std::__1::allocator<float> >, std::__1::vector<float, std::__1::allocator<float> > >, 1>' is implicitly deleted because field '__elems_' has no default constructor
-    value_type __elems_[_Size > 0 ? _Size : 1];
-               ^
-1 warning and 11 errors generated.
+1 warning generated.
+main.cu(181): warning: variable "dt" was declared but never referenced
+
+./tupleHelper.hpp:51:32: error: expected ')'
+((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]);
+                               ^
+./tupleHelper.hpp:51:2: note: to match this '('
+((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]);
+ ^
+./tupleHelper.hpp:51:112: error: expected ')'
+((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]);
+                                                                                                               ^
+./tupleHelper.hpp:51:81: note: to match this '('
+((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]);
+                                                                                ^
+./tupleHelper.hpp:64:30: error: expected ')'
+((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]);
+                             ^
+./tupleHelper.hpp:64:2: note: to match this '('
+((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]);
+ ^
+./tupleHelper.hpp:64:108: error: expected ')'
+((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]);
+                                                                                                           ^
+./tupleHelper.hpp:64:79: note: to match this '('
+((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]) = (((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]);
+                                                                              ^
+./tupleHelper.hpp:79:34: error: expected ')'
+(((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]); }
+                                 ^
+./tupleHelper.hpp:79:3: note: to match this '('
+(((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]); }
+  ^
+./tupleHelper.hpp:79:245: error: expected ')'
+(((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]); }
+                                                                                                                                                                                                                                                    ^
+./tupleHelper.hpp:79:215: note: to match this '('
+(((soax.std::tuple_element< N - 1, AttributeTuple> ::type::template Access< IndexOfAtt< typename std::__1::tuple_element< N - 1, AttributeTuple> ::type, AttributeTuple> ::value, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< N - 1, AttributeTuple> ::type::Object::value)[j]); }
+                                                                                                                                                                                                                      ^
+./tupleHelper.hpp:90:32: error: expected ')'
+(((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]); }
+                               ^
+./tupleHelper.hpp:90:3: note: to match this '('
+(((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]); }
+  ^
+./tupleHelper.hpp:90:142: error: expected ')'
+(((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]); }
+                                                                                                                                             ^
+./tupleHelper.hpp:90:114: note: to match this '('
+(((soax.std::tuple_element< 0UL, AttributeTuple> ::type::template Access< 0, AttributeTuple> ::data_)[j])[i]) = ((obj.std::tuple_element< 0UL, AttributeTuple> ::type::Object::value)[j]); }
+                                                                                                                 ^
+8 errors generated.
 make: *** [main.o] Error 1
